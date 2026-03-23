@@ -1,0 +1,30 @@
+// srp way
+function greetusers(users){
+    //first job pick user for processing
+    for (let i=0; i<users.length; i++){
+        greetuser(users[i])
+    }
+}
+
+function greetuser(user){
+    const name = formatName(user.name)
+    const message = getAgeMessage(user.age)
+    console.log("Hello " + name + " " + message)
+}
+function formatName(name){
+    return name.toUpperCase()
+}
+
+function getAgeMessage(age){
+    if(age >= 18){
+        return "YOU ARE AN ADULTT"
+    }else {
+        return "YOU ARE A MINOR"
+    }    
+}
+
+const users2 = [
+    {name: "SHAYNE WANJIRU", age: "2" }
+
+]
+console.log(greetusers(users2))
